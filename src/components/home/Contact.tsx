@@ -9,7 +9,10 @@ const INSTAGRAM_URL = "https://instagram.com/versoridigital"; // <- cambiá si h
 
 export default function Contact() {
   return (
-    <section id="contacto" className="py-18 sm:py-20">
+    <section id="contacto" className="relative py-18 sm:py-20 overflow-hidden">
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[var(--violet-brand)]/35 via-[var(--electric)]/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-noise opacity-20 mix-blend-overlay" />
       <Container>
         <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
           {/* Left */}

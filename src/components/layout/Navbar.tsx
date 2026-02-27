@@ -8,10 +8,12 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const LINKS = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Trabajos", href: "#trabajos" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Trabajos", href: "/#trabajos" },
+  { label: "Proceso", href: "/proceso" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 export default function Navbar() {
@@ -42,8 +44,9 @@ export default function Navbar() {
       />
 
       <Container>
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
+        <div className="flex justify-between items-center h-16 md:grid md:grid-cols-3">
+          {/* Logo — izquierda */}
+          <Link href="/" className="flex items-center gap-3 justify-self-start">
             <Image
               src="/logo-horizontal.png"
               alt="Versori Digital"
@@ -57,10 +60,10 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop */}
+          {/* Desktop nav — centro */}
           <nav
             className={cn(
-              "hidden md:flex items-center gap-6 text-sm transition-colors duration-300",
+              "hidden md:flex items-center justify-center gap-6 text-sm transition-colors duration-300",
               scrolled ? "text-white/80" : "text-white/70"
             )}
           >
@@ -71,40 +74,40 @@ export default function Navbar() {
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-2">
-            <Button variant="ghost" href="#contacto">
-              Hablemos
-            </Button>
-            <Button href="#contacto">Pedir propuesta</Button>
+          {/* Botón — derecha */}
+          <div className="hidden md:flex items-center justify-end gap-2">
+            <Button href="/#contacto">Pedir propuesta</Button>
           </div>
 
-          {/* Mobile */}
-          <button
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Abrir menú"
-            className="md:hidden relative h-10 w-10 flex items-center justify-center"
+          {/* Mobile hamburger — derecha */}
+          <div className="flex md:hidden items-center justify-end">
+            <button
+              onClick={() => setOpen((v) => !v)}
+              aria-label="Abrir menú"
+              className="relative h-10 w-10 flex items-center justify-center"
             >
-            <div className="relative h-5 w-6">
+              <div className="relative h-5 w-6">
                 <span
-                className={cn(
+                  className={cn(
                     "absolute left-0 top-0 h-[2px] w-full bg-white transition-all duration-300",
                     open && "top-2 rotate-45"
-                )}
+                  )}
                 />
                 <span
-                className={cn(
+                  className={cn(
                     "absolute left-0 top-2 h-[2px] w-full bg-white transition-all duration-300",
                     open && "opacity-0"
-                )}
+                  )}
                 />
                 <span
-                className={cn(
+                  className={cn(
                     "absolute left-0 top-4 h-[2px] w-full bg-white transition-all duration-300",
                     open && "top-2 -rotate-45"
-                )}
+                  )}
                 />
-            </div>
+              </div>
             </button>
+          </div>
         </div>
 
         {/* Mobile dropdown */}
@@ -124,17 +127,9 @@ export default function Navbar() {
                 ))}
               </div>
 
-              <div className="mt-3 grid grid-cols-1 gap-2">
-                <Button href="#contacto" className="w-full" onClick={() => setOpen(false)}>
+              <div className="mt-3">
+                <Button href="/#contacto" className="w-full" onClick={() => setOpen(false)}>
                   Pedir propuesta
-                </Button>
-                <Button
-                  variant="ghost"
-                  href="#contacto"
-                  className="w-full"
-                  onClick={() => setOpen(false)}
-                >
-                  Hablemos
                 </Button>
               </div>
             </div>

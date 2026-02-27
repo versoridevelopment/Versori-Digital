@@ -100,8 +100,8 @@ export default function Work() {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Header */}
-          <motion.div variants={itemVariants} className="max-w-2xl">
-            <p className="text-xs text-[var(--electric)] font-bold tracking-widest uppercase">
+          <motion.div variants={itemVariants} className="max-w-2xl mx-auto text-center">
+            <p className="text-xs text-white/60 font-bold tracking-widest uppercase">
               Trabajos
             </p>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tighter text-balance text-white">

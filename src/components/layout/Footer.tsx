@@ -35,24 +35,18 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="text-white/60">Secciones</div>
               <div className="flex flex-col gap-2">
-                <Link className="text-white/80 hover:text-white" href="#servicios">
-                  Servicios
-                </Link>
-                <Link className="text-white/80 hover:text-white" href="#trabajos">
-                  Trabajos
-                </Link>
-                <Link className="text-white/80 hover:text-white" href="#proceso">
-                  Proceso
-                </Link>
+                <Link className="text-white/80 hover:text-white" href="/#servicios">Servicios</Link>
+                <Link className="text-white/80 hover:text-white" href="/#trabajos">Trabajos</Link>
+                <Link className="text-white/80 hover:text-white" href="/proceso">Proceso</Link>
+                <Link className="text-white/80 hover:text-white" href="/nosotros">Nosotros</Link>
+                <Link className="text-white/80 hover:text-white" href="/blog">Blog</Link>
               </div>
             </div>
 
             <div className="space-y-2">
               <div className="text-white/60">Contacto</div>
               <div className="flex flex-col gap-2">
-                <Link className="text-white/80 hover:text-white" href="#contacto">
-                  Pedir propuesta
-                </Link>
+                <Link className="text-white/80 hover:text-white" href="/#contacto">Pedir propuesta</Link>
                 <span className="text-white/70">Argentina</span>
               </div>
             </div>
@@ -67,6 +61,7 @@ export default function Footer() {
 
         <div className="py-6 border-t border-white/10 text-xs text-white/50 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} Versori Digital. Todos los derechos reservados.</span>
+          <Link href="/privacidad" className="hover:text-white/70 transition">Política de privacidad</Link>
         </div>
       </Container>
     </footer>

@@ -4,22 +4,22 @@ import Container from "@/components/layout/Container";
 const SERVICES = [
   {
     title: "Branding & Identidad",
-    desc: "Creamos marcas con personalidad, coherencia visual y presencia profesional.",
+    desc: "Creamos marcas con personalidad y coherencia visual: desde el logo hasta los colores, tipografías y estilo único de tu negocio.",
     icon: "✨",
   },
   {
     title: "Marketing & Campañas",
-    desc: "Estrategias pensadas para atraer clientes y convertir atención en ventas.",
+    desc: "Estrategias pensadas para atraer clientes y convertir atención en ventas reales: publicidad, contenido pago y resultados medibles.",
     icon: "📈",
   },
   {
     title: "Manejo de Redes",
-    desc: "Contenido estratégico, calendario editorial y publicaciones con identidad clara.",
+    desc: "Contenido estratégico y publicaciones pensadas para crecer: fotos, videos, textos y todo lo que necesitás en tus redes.",
     icon: "📱",
   },
   {
-    title: "Sitios Web",
-    desc: "Páginas modernas, rápidas y enfocadas en generar confianza y resultados.",
+    title: "Web & Sistemas",
+    desc: "Sitios modernos y sistemas a medida: desde una página profesional hasta una aplicación completa para tu negocio.",
     icon: "🌐",
   },
 ];
@@ -28,10 +28,8 @@ export default function Services() {
   return (
     <section id="servicios" className="py-20">
       <Container>
-        <div className="max-w-2xl">
-          <p className="text-xs text-white/60 tracking-widest uppercase">
-            Servicios
-          </p>
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-xs text-white/60 tracking-widest uppercase">Servicios</p>
           <h2 className="mt-2 text-3xl sm:text-4xl font-semibold tracking-tight">
             Todo lo que tu marca necesita para crecer
           </h2>
@@ -40,7 +38,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((s) => (
             <div
               key={s.title}
@@ -53,9 +51,7 @@ export default function Services() {
                 <div className="text-base font-semibold">{s.title}</div>
               </div>
 
-              <p className="mt-4 text-sm text-white/70 leading-relaxed">
-                {s.desc}
-              </p>
+              <p className="mt-4 text-sm text-white/70 leading-relaxed">{s.desc}</p>
 
               <div className="mt-6 h-1 w-full rounded-full bg-brand-gradient-violet opacity-80" />
             </div>

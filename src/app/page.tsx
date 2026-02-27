@@ -39,7 +39,8 @@ Sobre nosotros /nosotros (opcional)
 
 Contacto /contacto
 
-Política de privacidad /privacidad (recomendado mínimo legal)
+Política de privacidad /p
+rivacidad (recomendado mínimo legal)
 
 Blog /blog (opcional, si querés SEO)
 

@@ -36,7 +36,7 @@ export default function NosotrosValues() {
             {/* Subtle background */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-[#3a3399]/10 to-black" />
             <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#cc06ef]/8 blur-[120px]" />
-            <Container>
+            <div className="relative z-10"><Container>
                 {/* Intro */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ export default function NosotrosValues() {
                         — Equipo Versori
                     </p>
                 </motion.div>
-            </Container>
+            </Container></div>
         </section>
     );
 }

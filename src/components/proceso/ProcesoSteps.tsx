@@ -47,7 +47,7 @@ export default function ProcesoSteps() {
             {/* Subtle background */}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-[#3d29cc]/8 to-black" />
             <div className="pointer-events-none absolute bottom-0 left-1/4 h-[350px] w-[350px] rounded-full bg-[#3a3399]/15 blur-[120px]" />
-            <Container>
+            <div className="relative z-10"><Container>
                 <div className="relative">
                     {/* Vertical line */}
                     <div className="absolute left-6 top-0 bottom-0 w-px bg-white/[0.07] hidden md:block" />
@@ -117,7 +117,7 @@ export default function ProcesoSteps() {
                         Pedir propuesta →
                     </a>
                 </motion.div>
-            </Container>
+            </Container></div>
         </section>
     );
 }

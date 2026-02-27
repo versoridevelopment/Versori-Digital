@@ -119,8 +119,11 @@ export default function BlogGrid() {
     const [featured, ...rest] = POSTS;
 
     return (
-        <section className="py-20 bg-black">
-            <Container>
+        <section className="relative py-20 overflow-hidden">
+            {/* Subtle background */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-[#8e23a5]/8 to-black" />
+            <div className="pointer-events-none absolute top-1/3 right-0 h-[350px] w-[350px] rounded-full bg-[#3d29cc]/10 blur-[120px]" />
+            <div className="relative z-10"><Container>
                 {/* Coming soon notice */}
                 <motion.div
                     initial={{ opacity: 0, y: 16 }}
@@ -190,7 +193,7 @@ export default function BlogGrid() {
                         Notificarme →
                     </a>
                 </motion.div>
-            </Container>
+            </Container></div>
         </section>
     );
 }

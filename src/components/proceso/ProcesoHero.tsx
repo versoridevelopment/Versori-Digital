@@ -16,10 +16,12 @@ const containerVariants: Variants = {
 export default function ProcesoHero() {
     return (
         <section className="relative min-h-[52vh] flex items-end overflow-hidden pb-0">
-            {/* Glows */}
+            {/* Background gradient — indigo → electric */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#3a3399] via-[#3d29cc]/70 to-black" />
+            {/* Glow spots */}
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-[440px] w-[440px] rounded-full bg-[var(--electric)]/20 blur-[120px]" />
-                <div className="absolute top-20 -right-24 h-[280px] w-[280px] rounded-full bg-[var(--violet-brand)]/15 blur-[90px]" />
+                <div className="absolute -top-20 left-1/2 -translate-x-1/2 h-[360px] w-[360px] rounded-full bg-[#3d29cc]/40 blur-[100px]" />
+                <div className="absolute bottom-0 right-0 h-[240px] w-[240px] rounded-full bg-[#cc06ef]/20 blur-[80px]" />
                 <div className="absolute inset-0 bg-noise opacity-25 mix-blend-overlay" />
             </div>
 
@@ -32,8 +34,8 @@ export default function ProcesoHero() {
                 >
                     {/* Badge */}
                     <motion.div variants={itemVariants}>
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[var(--electric)]" />
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#cc06ef]" />
                             Cómo trabajamos
                         </span>
                     </motion.div>
@@ -45,7 +47,7 @@ export default function ProcesoHero() {
                         style={{ fontFamily: "var(--font-poppins)" }}
                     >
                         Un proceso{" "}
-                        <span className="text-[var(--electric)] drop-shadow-[0_0_28px_rgba(61,41,204,0.35)]">
+                        <span className="text-[#cc06ef] drop-shadow-[0_0_28px_rgba(204,6,239,0.5)]">
                             claro
                         </span>{" "}
                         y enfocado.
@@ -54,7 +56,7 @@ export default function ProcesoHero() {
                     {/* Subtitle */}
                     <motion.p
                         variants={itemVariants}
-                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/55 leading-relaxed"
+                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/70 leading-relaxed"
                     >
                         Sin vueltas, sin sorpresas. Te contamos exactamente qué pasa desde el primer día hasta
                         que tu proyecto sale al mundo.

@@ -32,7 +32,10 @@ const VALUES = [
 
 export default function NosotrosValues() {
     return (
-        <section className="py-20 bg-black">
+        <section className="relative py-20 overflow-hidden">
+            {/* Subtle background */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-[#3a3399]/10 to-black" />
+            <div className="pointer-events-none absolute top-0 right-0 h-[400px] w-[400px] rounded-full bg-[#cc06ef]/8 blur-[120px]" />
             <Container>
                 {/* Intro */}
                 <motion.div
@@ -40,7 +43,7 @@ export default function NosotrosValues() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
-                    className="max-w-2xl mb-14"
+                    className="max-w-2xl mx-auto text-center mb-14"
                 >
                     <h2
                         className="text-2xl sm:text-3xl font-bold text-white tracking-tight"

@@ -16,10 +16,12 @@ const containerVariants: Variants = {
 export default function NosotrosHero() {
     return (
         <section className="relative min-h-[52vh] flex items-end overflow-hidden pb-0">
-            {/* Glows */}
+            {/* Background gradient — violet → indigo */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#8e23a5]/80 via-[#3a3399]/60 to-black" />
+            {/* Glow spots */}
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-24 -left-24 h-[380px] w-[380px] rounded-full bg-[var(--violet-brand)]/20 blur-[110px]" />
-                <div className="absolute top-16 right-0 h-[260px] w-[260px] rounded-full bg-[var(--electric)]/15 blur-[80px]" />
+                <div className="absolute -top-16 -left-16 h-[400px] w-[400px] rounded-full bg-[#cc06ef]/30 blur-[120px]" />
+                <div className="absolute bottom-0 right-1/4 h-[260px] w-[260px] rounded-full bg-[#3d29cc]/30 blur-[80px]" />
                 <div className="absolute inset-0 bg-noise opacity-25 mix-blend-overlay" />
             </div>
 
@@ -32,8 +34,8 @@ export default function NosotrosHero() {
                 >
                     {/* Badge */}
                     <motion.div variants={itemVariants}>
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[var(--violet-brand)]" />
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#cc06ef]" />
                             Sobre nosotros
                         </span>
                     </motion.div>
@@ -45,7 +47,7 @@ export default function NosotrosHero() {
                         style={{ fontFamily: "var(--font-poppins)" }}
                     >
                         Gente real,{" "}
-                        <span className="text-[var(--violet-brand)] drop-shadow-[0_0_28px_rgba(204,6,239,0.3)]">
+                        <span className="text-[#cc06ef] drop-shadow-[0_0_28px_rgba(204,6,239,0.5)]">
                             resultados reales.
                         </span>
                     </motion.h1>
@@ -53,7 +55,7 @@ export default function NosotrosHero() {
                     {/* Subtitle */}
                     <motion.p
                         variants={itemVariants}
-                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/55 leading-relaxed"
+                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/70 leading-relaxed"
                     >
                         Somos un equipo apasionado por el diseño, la estrategia y la tecnología. Trabajamos con
                         marcas que quieren hacer las cosas bien.

@@ -43,7 +43,10 @@ const STEPS = [
 
 export default function ProcesoSteps() {
     return (
-        <section className="py-20 bg-black">
+        <section className="relative py-20 overflow-hidden">
+            {/* Subtle background */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black via-[#3d29cc]/8 to-black" />
+            <div className="pointer-events-none absolute bottom-0 left-1/4 h-[350px] w-[350px] rounded-full bg-[#3a3399]/15 blur-[120px]" />
             <Container>
                 <div className="relative">
                     {/* Vertical line */}

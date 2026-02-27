@@ -16,10 +16,12 @@ const containerVariants: Variants = {
 export default function BlogHero() {
     return (
         <section className="relative min-h-[50vh] flex items-end overflow-hidden pb-0">
-            {/* Glows */}
+            {/* Background gradient — electric → violet diagonal */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-bl from-[#3d29cc] via-[#8e23a5]/60 to-black" />
+            {/* Glow spots */}
             <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -top-28 right-1/4 h-[360px] w-[360px] rounded-full bg-[var(--violet-brand)]/20 blur-[110px]" />
-                <div className="absolute top-24 -left-16 h-[240px] w-[240px] rounded-full bg-[var(--electric)]/12 blur-[80px]" />
+                <div className="absolute -top-24 right-1/3 h-[380px] w-[380px] rounded-full bg-[#cc06ef]/25 blur-[110px]" />
+                <div className="absolute bottom-0 left-0 h-[220px] w-[220px] rounded-full bg-[#3a3399]/50 blur-[70px]" />
                 <div className="absolute inset-0 bg-noise opacity-25 mix-blend-overlay" />
             </div>
 
@@ -32,8 +34,8 @@ export default function BlogHero() {
                 >
                     {/* Badge */}
                     <motion.div variants={itemVariants}>
-                        <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/60 backdrop-blur-sm">
-                            <span className="h-1.5 w-1.5 rounded-full bg-[var(--violet-brand)]" />
+                        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur-sm">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[#cc06ef]" />
                             Ideas que suman
                         </span>
                     </motion.div>
@@ -45,7 +47,7 @@ export default function BlogHero() {
                         style={{ fontFamily: "var(--font-poppins)" }}
                     >
                         Blog{" "}
-                        <span className="text-[var(--violet-brand)] drop-shadow-[0_0_28px_rgba(204,6,239,0.3)]">
+                        <span className="text-[#cc06ef] drop-shadow-[0_0_28px_rgba(204,6,239,0.5)]">
                             Versori.
                         </span>
                     </motion.h1>
@@ -53,7 +55,7 @@ export default function BlogHero() {
                     {/* Subtitle */}
                     <motion.p
                         variants={itemVariants}
-                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/55 leading-relaxed"
+                        className="mt-5 max-w-xl mx-auto text-base sm:text-lg text-white/70 leading-relaxed"
                     >
                         Tips, estrategias y tendencias de marketing, branding y desarrollo web. Sin relleno, solo
                         lo que te sirve.
